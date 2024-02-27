@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root
+{
+    --color_body: #eee;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: var(--color_body);
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* _________________________________________________header___________________________________________ */
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    margin-top: 20px;
+}
+header nav
+{
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid #ffffff72;
+    padding: 15px 5px;
+    border-radius: 30px;
+    background: #0000007d;
+}
+header nav a{
+    margin: 0 15px;
+    color: var(--color);
+    font-size: small;
+    padding: 10px;
+    border-radius: 20px;
+    transition: .3s;
+}
+header nav a:hover
+{
+    background-color: #eee;
+    color: #000000;
+}
+/* _________________________________________________End_header___________________________________________ */
+
+
+
+
+/* _________________________________________________Home___________________________________________ */
+.tab{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/bg.png);
+    background-size: 50%;
+}
+.tab .container{
+
+    max-width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    position: relative;
+}
+#intro{
+    background-color: #1a1c1d;
+    background-size: cover;
+}
+/* _________________________________________________End_Home___________________________________________ */
+
+
+
+
+
+/* experience _____________________________________________________________________________________*/
+#experience{
+    background-color: #517ca5;
+    background-size: cover;
+}
+/* skills _____________________________________________________________________________________*/
+#skill{
+    background-color: #000000;
+    background-size: cover;
+}
+/* project _____________________________________________________________________________________*/
+#project{
+    background-color: #673d5c;
+    background-size: cover;
+}
+/* contact _________________________________________________________________________________________ */
+#contact{
+    background: #4c43b0;
+    background-size: cover;
+}
+
+
+
+/* =================================================@media========================================== */
+
+@media screen and (max-width: 991px){
+    #intro .avatar img{
+        transform: translateX(200px);
+    }
+
+}
+
+@media (max-width: 500px){
+    
+}
+
+@media screen and (max-width: 767px){
+    body{
+        font-size: 10px;
+    }
+    header nav a{
+        margin: 10px;
+    }
+    
+}
+
+/* effect _____________________________________________________________________________________*/
+.tab{
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 1;
+}
+#intro{
+    z-index: 2;
+}
+
+.tab.active{
+    --x: 50%;
+    --y: 50%;
+    clip-path: circle(
+        200% at var(--x) var(--y)
+    );
+    animation: showTab 1s ease-in-out 1;
+}
+@keyframes showTab{
+    from{
+        clip-path: circle(
+            0% at var(--x) var(--y)
+        );
+    }
+}
+
+
+/* Scrollbar ________________________________________________________________________________________*/
+::-webkit-scrollbar 
+{
+    background-color: transparent;
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb 
+{
+    background: linear-gradient(#21d4fd, #b721ff);
+    border-radius: 100px;
+}
